@@ -1,0 +1,10 @@
+streamlit>=1.32
+transformers>=4.40
+torch>=2.1
+numpy>=1.23
+pillow>=9.5
+safetensors>=0.4
+huggingface_hub>=0.23
+opencv-python-headless>=4.8
+scipy>=1.11
+matplotlib>=3.7
