@@ -541,11 +541,12 @@ if uploaded and seg_ok:
         unsafe_allow_html=True
     )
 
+    conf_str = f"{confidence:.0f}%"
     PRED_TEXTS = {
-        0: f"Normal — No significant lesion detected ({confidence:.0f}%)",
-        1: f"Benign Ulcer — Likely inflammatory ({confidence:.0f}% confidence)",
-        2: f"Pre-cancerous Lesion Suspected ({confidence:.0f}% confidence)",
-        3: f"Cancerous Lesion — High Suspicion ({confidence:.0f}% confidence)",
+        0: f"Normal — No significant lesion detected ({conf_str})",
+        1: f"Benign Ulcer — Likely inflammatory ({conf_str} confidence)",
+        2: f"Pre-cancerous Lesion Suspected ({conf_str} confidence)",
+        3: f"Cancerous Lesion — High Suspicion ({conf_str} confidence)",
     }
     st.markdown(
         f'<div class="prediction-box {CLASS_PRED[predicted_cls]}">'
